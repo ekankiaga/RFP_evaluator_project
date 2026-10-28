@@ -1,0 +1,2 @@
+# Optional universal provider adapter. Install after requirements.txt.
+litellm>=1.105,<2

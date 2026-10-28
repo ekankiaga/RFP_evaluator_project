@@ -1,0 +1,13 @@
+DOMAIN GUIDANCE:
+{domain_addendum}
+
+ACTIVE CRITERIA:
+{criteria_json}
+
+MANDATORY GATES:
+{gates_json}
+
+SUPPLIER DOCUMENT EXCERPT:
+{document_text}
+
+Return the required JSON object. Evidence quotes must be verbatim and page numbers must match the supplied page labels.

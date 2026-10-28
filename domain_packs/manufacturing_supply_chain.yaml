@@ -1,0 +1,100 @@
+domain_id: manufacturing_supply_chain
+name: Manufacturing & Supply Chain
+description: Manufacturing capacity, components, logistics, and supply continuity.
+version: 1.0.0
+weight_split:
+  generic: 60
+  domain: 40
+generic_criteria:
+- name: Technical Capability
+  description: Product and process capability.
+  weight: 30
+  max_score: 10
+  what_to_inspect: Solution design, capacity, interoperability, performance evidence, and fit to the stated
+    requirements.
+- name: Implementation Plan
+  description: Ramp-up and operational delivery.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Named owners, milestones, delivery timeline, staffing, dependencies, testing, training,
+    and risk controls.
+- name: Commercial Value
+  description: Total landed cost and terms.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Total cost of ownership, price structure, included services, exclusions, assumptions,
+    and additional fees.
+- name: Security & Compliance
+  description: Quality and regulatory controls.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Security controls, independent audit evidence, privacy practices, incident response,
+    and stated limitations.
+- name: Support & Experience
+  description: Operational support and experience.
+  weight: 10
+  max_score: 10
+  what_to_inspect: Support hours, response and resolution targets, escalation, comparable delivery experience,
+    and references.
+domain_criteria:
+- name: Quality Certifications
+  description: Quality system certification and scope.
+  weight: 10
+  max_score: 10
+  what_to_inspect: ISO 9001/IATF scope, expiry, audit findings.
+  red_flags:
+  - Expired certification
+  evidence_hints:
+  - ISO 9001
+  - IATF
+  is_mandatory_gate: true
+- name: Capacity & Scalability
+  description: Demonstrated capacity against demand.
+  weight: 9
+  max_score: 10
+  what_to_inspect: Current utilization, reserved capacity, ramp limits.
+  red_flags:
+  - Capacity unsupported
+  evidence_hints:
+  - units per month
+  - capacity
+  is_mandatory_gate: false
+- name: Lead Time & Logistics
+  description: Delivery lead time and logistics reliability.
+  weight: 8
+  max_score: 10
+  what_to_inspect: Lead times, routes, buffers, Incoterms.
+  red_flags:
+  - Unstated logistics assumptions
+  evidence_hints:
+  - lead time
+  - logistics
+  is_mandatory_gate: false
+- name: ESG & Responsible Sourcing
+  description: Environmental and labor standards in sourcing.
+  weight: 7
+  max_score: 10
+  what_to_inspect: Supplier code, emissions, minerals, labor audits.
+  red_flags:
+  - No source traceability
+  evidence_hints:
+  - ESG
+  - responsible sourcing
+  is_mandatory_gate: false
+- name: Business Continuity
+  description: Resilience to site, supplier, and transport disruption.
+  weight: 6
+  max_score: 10
+  what_to_inspect: Alternate sites, safety stock, recovery plans.
+  red_flags:
+  - Single point of failure
+  evidence_hints:
+  - continuity
+  - alternate site
+  is_mandatory_gate: false
+gates:
+- gate_id: quality_cert
+  name: Current quality certification
+  rule: Pass when a current required quality certification and scope are documented.
+domain_prompt_addendum: Consider both stated capacity and supporting operational evidence. Do not infer
+  certification scope from a logo or name alone.

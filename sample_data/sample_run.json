@@ -1,0 +1,1262 @@
+{
+  "rfp_run_id": "SAMPLE-IT-SAAS-001",
+  "created_at": "2026-10-28T19:04:08.968126+00:00",
+  "status": "Draft",
+  "model": "mock-deterministic",
+  "criteria": [
+    {
+      "name": "Technical Capability",
+      "description": "Assesses fit to the requested workload, users, systems, and operating requirements.",
+      "weight": 18.0,
+      "max_score": 10,
+      "what_to_inspect": "Named capacity, architecture, supported integrations, tested connectors, performance limits, and requirements not met.",
+      "evidence_hints": [
+        "capacity",
+        "architecture",
+        "API",
+        "connector",
+        "integration test",
+        "performance"
+      ],
+      "criterion_id": "Technical Capability",
+      "is_active": true
+    },
+    {
+      "name": "Implementation Plan",
+      "description": "Assesses whether the supplier has a resourced and testable delivery plan.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Named delivery owners, timeline, milestones, migration rehearsals, acceptance criteria, training, dependencies, and rollback.",
+      "evidence_hints": [
+        "owner",
+        "timeline",
+        "milestone",
+        "migration",
+        "rehearsal",
+        "acceptance",
+        "training",
+        "rollback"
+      ],
+      "criterion_id": "Implementation Plan",
+      "is_active": true
+    },
+    {
+      "name": "Commercial Value",
+      "description": "Assesses price transparency and total cost over the stated contract term.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Contract term total, included services, exclusions, variable charges, assumptions, price changes, and optional costs. Do not reward low price alone.",
+      "evidence_hints": [
+        "five-year total",
+        "included",
+        "excluded",
+        "fee",
+        "priced separately",
+        "assumption"
+      ],
+      "criterion_id": "Commercial Value",
+      "is_active": true
+    },
+    {
+      "name": "Security & Compliance",
+      "description": "Assesses evidenced safeguards and transparent disclosure of security limitations.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Encryption, access control, incident notice, independent audit evidence, report scope and date, and identified control gaps.",
+      "evidence_hints": [
+        "encryption",
+        "access control",
+        "SOC 2",
+        "ISO 27001",
+        "incident",
+        "audit"
+      ],
+      "criterion_id": "Security & Compliance",
+      "is_active": true
+    },
+    {
+      "name": "Support & Experience",
+      "description": "Assesses support availability and relevant delivery experience.",
+      "weight": 6.0,
+      "max_score": 10,
+      "what_to_inspect": "Support hours, priority response target, escalation, recovery objectives, comparable deployments, and support limitations.",
+      "evidence_hints": [
+        "support",
+        "response target",
+        "escalation",
+        "recovery",
+        "deployments",
+        "references"
+      ],
+      "criterion_id": "Support & Experience",
+      "is_active": true
+    },
+    {
+      "name": "Service Levels & Availability",
+      "description": "Strength and enforceability of service levels.",
+      "weight": 10.0,
+      "max_score": 10,
+      "what_to_inspect": "Uptime target, measurement window, service credits, escalation.",
+      "red_flags": [
+        "Ambiguous uptime",
+        "no remedies"
+      ],
+      "evidence_hints": [
+        "SLA",
+        "uptime",
+        "service credit"
+      ],
+      "is_mandatory_gate": false,
+      "criterion_id": "Service Levels & Availability",
+      "is_active": true
+    },
+    {
+      "name": "API & Integration Depth",
+      "description": "Fit with required systems and integration patterns.",
+      "weight": 10.0,
+      "max_score": 10,
+      "what_to_inspect": "API coverage, standards, connectors, migration.",
+      "red_flags": [
+        "Vague integration plan"
+      ],
+      "evidence_hints": [
+        "API",
+        "connector",
+        "integration"
+      ],
+      "is_mandatory_gate": false,
+      "criterion_id": "API & Integration Depth",
+      "is_active": true
+    },
+    {
+      "name": "Data Residency & Privacy",
+      "description": "Location, handling, retention, and access controls for data.",
+      "weight": 8.0,
+      "max_score": 10,
+      "what_to_inspect": "Hosting regions, subprocessors, deletion.",
+      "red_flags": [
+        "Unspecified data location"
+      ],
+      "evidence_hints": [
+        "region",
+        "residency",
+        "retention"
+      ],
+      "is_mandatory_gate": false,
+      "criterion_id": "Data Residency & Privacy",
+      "is_active": true
+    },
+    {
+      "name": "Exit & Portability",
+      "description": "Ability to export data and transition at contract end.",
+      "weight": 7.0,
+      "max_score": 10,
+      "what_to_inspect": "Formats, fees, transition assistance, deletion proof.",
+      "red_flags": [
+        "No export path"
+      ],
+      "evidence_hints": [
+        "export",
+        "portability",
+        "exit"
+      ],
+      "is_mandatory_gate": false,
+      "criterion_id": "Exit & Portability",
+      "is_active": true
+    },
+    {
+      "name": "Security Certification",
+      "description": "Current independent security assurance.",
+      "weight": 5.0,
+      "max_score": 10,
+      "what_to_inspect": "ISO 27001 or SOC 2 scope and validity.",
+      "red_flags": [
+        "Certificate absent or expired"
+      ],
+      "evidence_hints": [
+        "ISO 27001",
+        "SOC 2"
+      ],
+      "is_mandatory_gate": true,
+      "criterion_id": "Security Certification",
+      "is_active": true
+    }
+  ],
+  "suppliers": [
+    {
+      "supplier_name": "Apex Systems",
+      "submission_date": "2026-01-10",
+      "experience_rating": 9.0,
+      "document_hash": "677b360495c7222f3efa2fbc22e42fb3b668e00bb4f85fb43913656d83079f11",
+      "document_name": "apex_systems.pdf",
+      "page_count": 3,
+      "text_quality": 1.0,
+      "scores": [
+        {
+          "criterion_id": "Technical Capability",
+          "criterion_name": "Technical Capability",
+          "score": 7.0,
+          "final_score": 7.0,
+          "weight": 18.0,
+          "max_score": 10.0,
+          "justification": "The response addresses part of this requirement, but some details or commitments remain unclear.",
+          "evidence": {
+            "quote": "The platform supports 2 million named users.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 7.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Implementation Plan",
+          "criterion_name": "Implementation Plan",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "The plan includes source data mapping, two\nmigration rehearsals, role-based user testing, a rollback checkpoint, and administrator training before go-live.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Commercial Value",
+          "criterion_name": "Commercial Value",
+          "score": 9.2,
+          "final_score": 9.2,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Five-year total is $1.42 million, including implementation, subscription, standard support, and two migration rehearsals.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Security & Compliance",
+          "criterion_name": "Security & Compliance",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "The incident plan commits to customer notice\nwithin 24 hours of a confirmed material incident.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Support & Experience",
+          "criterion_name": "Support & Experience",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 6.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Priority 1 support is staffed 24 by 7 with a 15-minute response target.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Service Levels & Availability",
+          "criterion_name": "Service Levels & Availability",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 10.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Service credits apply when monthly uptime falls below the contracted target.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "API & Integration Depth",
+          "criterion_name": "API & Integration Depth",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 10.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "REST APIs, SCIM provisioning, and tested connectors for Okta and Workday.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Data Residency & Privacy",
+          "criterion_name": "Data Residency & Privacy",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 8.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "The production design uses separate US and EU regions.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Exit & Portability",
+          "criterion_name": "Exit & Portability",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 7.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "At contract end, the customer may export records and relationships in CSV and JSON without an extraction fee.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Security Certification",
+          "criterion_name": "Security Certification",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 5.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "The response includes a current SOC 2 Type II report dated February 15, 2026, and an ISO 27001 certificate valid\nthrough June 30, 2027.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      ],
+      "risks": [],
+      "overall_summary": "Offline keyword-based demo evaluation. Confirm every score and mandatory gate against the proposal before relying on the result.",
+      "gates": [
+        {
+          "gate_id": "security_certificate",
+          "name": "Valid security assurance",
+          "outcome": "yes",
+          "evidence": "Security Certification\nThe response includes a current SOC 2 Type II report dated February 15, 2026, and an ISO 27001 certificate valid\nthrough June 30, 2027.",
+          "page": 3,
+          "mandatory": true
+        }
+      ],
+      "compliant": true,
+      "status": "AI Evaluated",
+      "warnings": [],
+      "absolute_score": 93.64,
+      "benchmark_metrics": {
+        "Technical Capability": {
+          "benchmark": 7.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Implementation Plan": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Commercial Value": {
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Security & Compliance": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Support & Experience": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Service Levels & Availability": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "API & Integration Depth": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Data Residency & Privacy": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Exit & Portability": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Security Certification": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      },
+      "ppi": 100.0,
+      "rank": 1,
+      "tie_break_explanation": "",
+      "supplier_id": "7015a7ac-45a0-4592-9e61-c6acce7ffdf8"
+    },
+    {
+      "supplier_name": "Orbit Digital",
+      "submission_date": "2026-01-16",
+      "experience_rating": 8.5,
+      "document_hash": "e76d8f204dc542defa2531c9ba0de4541f451c7823756fe1c7ad2f57fc8a42f0",
+      "document_name": "orbit_digital.pdf",
+      "page_count": 3,
+      "text_quality": 1.0,
+      "scores": [
+        {
+          "criterion_id": "Technical Capability",
+          "criterion_name": "Technical Capability",
+          "score": 7.0,
+          "final_score": 7.0,
+          "weight": 18.0,
+          "max_score": 10.0,
+          "justification": "The response addresses part of this requirement, but some details or commitments remain unclear.",
+          "evidence": {
+            "quote": "The platform supports 400,000 users.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 7.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Implementation Plan",
+          "criterion_name": "Implementation Plan",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "The plan includes process workshops, a staged migration, one full\nrehearsal, weekly risk review, and administrator training.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Commercial Value",
+          "criterion_name": "Commercial Value",
+          "score": 9.2,
+          "final_score": 9.2,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Five-year total is $1.19 million, including the standard reporting package, implementation, and 24 by 7 critical support.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Security & Compliance",
+          "criterion_name": "Security & Compliance",
+          "score": 7.0,
+          "final_score": 7.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response addresses part of this requirement, but some details or commitments remain unclear.",
+          "evidence": {
+            "quote": "AES-256 at rest, TLS 1.2 in transit, quarterly access reviews, and a 24-hour incident notification target are\ndocumented.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -3.0,
+          "relative_pct": 70.0
+        },
+        {
+          "criterion_id": "Support & Experience",
+          "criterion_name": "Support & Experience",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 6.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Relevant experience: 10 comparable deployments,\nincluding four public-sector organizations.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Service Levels & Availability",
+          "criterion_name": "Service Levels & Availability",
+          "score": 6.0,
+          "final_score": 6.0,
+          "weight": 10.0,
+          "max_score": 10.0,
+          "justification": "The response addresses part of this requirement, but some details or commitments remain unclear.",
+          "evidence": {
+            "quote": "Recovery time is eight hours and recovery point is two hours.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -4.0,
+          "relative_pct": 60.0
+        },
+        {
+          "criterion_id": "API & Integration Depth",
+          "criterion_name": "API & Integration Depth",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 10.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "REST APIs, SAML, and standard connectors for Microsoft Entra ID and ServiceNow.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Data Residency & Privacy",
+          "criterion_name": "Data Residency & Privacy",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 8.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Hosting is available in the US and EU.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Exit & Portability",
+          "criterion_name": "Exit & Portability",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 7.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Data is exportable in CSV and JSON with linked records.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Security Certification",
+          "criterion_name": "Security Certification",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 5.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "A current ISO 27001 certificate is valid through May 31, 2027.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      ],
+      "risks": [],
+      "overall_summary": "Offline keyword-based demo evaluation. Confirm every score and mandatory gate against the proposal before relying on the result.",
+      "gates": [
+        {
+          "gate_id": "security_certificate",
+          "name": "Valid security assurance",
+          "outcome": "yes",
+          "evidence": "Security Certification\nA current ISO 27001 certificate is valid through May 31, 2027.",
+          "page": 3,
+          "mandatory": true
+        }
+      ],
+      "compliant": true,
+      "status": "AI Evaluated",
+      "warnings": [],
+      "absolute_score": 86.03999999999999,
+      "benchmark_metrics": {
+        "Technical Capability": {
+          "benchmark": 7.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Implementation Plan": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Commercial Value": {
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Security & Compliance": {
+          "benchmark": 10.0,
+          "gap": -3.0,
+          "relative_pct": 70.0
+        },
+        "Support & Experience": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Service Levels & Availability": {
+          "benchmark": 10.0,
+          "gap": -4.0,
+          "relative_pct": 60.0
+        },
+        "API & Integration Depth": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Data Residency & Privacy": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Exit & Portability": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Security Certification": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      },
+      "ppi": 92.4,
+      "rank": 2,
+      "tie_break_explanation": "",
+      "supplier_id": "fc0f0970-ceaf-4f6d-89b3-221945e4a185"
+    },
+    {
+      "supplier_name": "BrightPath Tech",
+      "submission_date": "2026-01-12",
+      "experience_rating": 8.0,
+      "document_hash": "87ff0d8805216b7cea5b43c7cd2e153710560c4ec4caa3c309b197b12708d9f4",
+      "document_name": "brightpath_tech.pdf",
+      "page_count": 3,
+      "text_quality": 1.0,
+      "scores": [
+        {
+          "criterion_id": "Technical Capability",
+          "criterion_name": "Technical Capability",
+          "score": 7.0,
+          "final_score": 7.0,
+          "weight": 18.0,
+          "max_score": 10.0,
+          "justification": "The response addresses part of this requirement, but some details or commitments remain unclear.",
+          "evidence": {
+            "quote": "The service supports 600,000 users.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 7.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Implementation Plan",
+          "criterion_name": "Implementation Plan",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "A named project manager and data migration lead own a 12-week rollout.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Commercial Value",
+          "criterion_name": "Commercial Value",
+          "score": 9.2,
+          "final_score": 9.2,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Five-year total is $1.08 million, including implementation and standard support.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Security & Compliance",
+          "criterion_name": "Security & Compliance",
+          "score": 5.0,
+          "final_score": 5.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "AES-256 at rest and TLS 1.2 in transit are described.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -5.0,
+          "relative_pct": 50.0
+        },
+        {
+          "criterion_id": "Support & Experience",
+          "criterion_name": "Support & Experience",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 6.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Priority 1 incidents receive a 30-minute response during 24 by 7 coverage.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Service Levels & Availability",
+          "criterion_name": "Service Levels & Availability",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 10.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Service credits are offered below\n99.9% uptime.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "API & Integration Depth",
+          "criterion_name": "API & Integration Depth",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 10.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "REST APIs, SAML single sign-on, and standard CSV import.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Data Residency & Privacy",
+          "criterion_name": "Data Residency & Privacy",
+          "score": 4.0,
+          "final_score": 4.0,
+          "weight": 8.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "The production hosting region and subprocessor locations are not identified in this proposal.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -6.0,
+          "relative_pct": 40.0
+        },
+        {
+          "criterion_id": "Exit & Portability",
+          "criterion_name": "Exit & Portability",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 7.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "A CSV export is available at termination.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Security Certification",
+          "criterion_name": "Security Certification",
+          "score": 2.5,
+          "final_score": 2.5,
+          "weight": 5.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "The SOC 2 Type II assessment is in progress; the proposal confirms there is no current SOC 2 report, and no ISO\n27001 certificate is supplied.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -7.5,
+          "relative_pct": 25.0
+        }
+      ],
+      "risks": [
+        "Security Certification: required current assurance evidence is missing or planned"
+      ],
+      "overall_summary": "Offline keyword-based demo evaluation. Confirm every score and mandatory gate against the proposal before relying on the result.",
+      "gates": [
+        {
+          "gate_id": "security_certificate",
+          "name": "Valid security assurance",
+          "outcome": "no",
+          "evidence": "Security Certification\nThe SOC 2 Type II assessment is in progress; the proposal confirms there is no current SOC 2 report, and no ISO\n27001 certificate is supplied.",
+          "page": 3,
+          "mandatory": true
+        }
+      ],
+      "compliant": false,
+      "status": "AI Evaluated",
+      "warnings": [],
+      "absolute_score": 79.09,
+      "benchmark_metrics": {
+        "Technical Capability": {
+          "benchmark": 7.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Implementation Plan": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Commercial Value": {
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Security & Compliance": {
+          "benchmark": 10.0,
+          "gap": -5.0,
+          "relative_pct": 50.0
+        },
+        "Support & Experience": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Service Levels & Availability": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "API & Integration Depth": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Data Residency & Privacy": {
+          "benchmark": 10.0,
+          "gap": -6.0,
+          "relative_pct": 40.0
+        },
+        "Exit & Portability": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Security Certification": {
+          "benchmark": 10.0,
+          "gap": -7.5,
+          "relative_pct": 25.0
+        }
+      },
+      "ppi": 85.45,
+      "rank": 3,
+      "tie_break_explanation": "",
+      "supplier_id": "3a22d0e9-6a1e-4b1e-822d-34ee5772e081"
+    },
+    {
+      "supplier_name": "NexaWorks",
+      "submission_date": "2026-01-14",
+      "experience_rating": 7.0,
+      "document_hash": "9dd10d5c43b2653245811457d9714825be4b30588f9809866b293744d05708f5",
+      "document_name": "nexaworks.pdf",
+      "page_count": 3,
+      "text_quality": 1.0,
+      "scores": [
+        {
+          "criterion_id": "Technical Capability",
+          "criterion_name": "Technical Capability",
+          "score": 2.0,
+          "final_score": 2.0,
+          "weight": 18.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "The proposal does not specify a tested user limit or a committed production availability target.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 7.0,
+          "gap": -5.0,
+          "relative_pct": 28.57142857142857
+        },
+        {
+          "criterion_id": "Implementation Plan",
+          "criterion_name": "Implementation Plan",
+          "score": 3.0,
+          "final_score": 3.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "The estimated rollout is 10 weeks, but the plan does not name a customer-side migration owner.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -7.0,
+          "relative_pct": 30.0
+        },
+        {
+          "criterion_id": "Commercial Value",
+          "criterion_name": "Commercial Value",
+          "score": 7.0,
+          "final_score": 7.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The response addresses part of this requirement, but some details or commitments remain unclear.",
+          "evidence": {
+            "quote": "Five-year total is $930,000, the lowest offer.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 9.2,
+          "gap": -2.1999999999999993,
+          "relative_pct": 76.08695652173914
+        },
+        {
+          "criterion_id": "Security & Compliance",
+          "criterion_name": "Security & Compliance",
+          "score": 5.0,
+          "final_score": 5.0,
+          "weight": 12.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "AES-256 at rest and TLS 1.2 in transit are stated.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -5.0,
+          "relative_pct": 50.0
+        },
+        {
+          "criterion_id": "Support & Experience",
+          "criterion_name": "Support & Experience",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 6.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "Priority 1 support is available 24 by 5 with a one-hour response target.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Service Levels & Availability",
+          "criterion_name": "Service Levels & Availability",
+          "score": 5.0,
+          "final_score": 5.0,
+          "weight": 10.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "Recovery objectives and service credits are not stated.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -5.0,
+          "relative_pct": 50.0
+        },
+        {
+          "criterion_id": "API & Integration Depth",
+          "criterion_name": "API & Integration Depth",
+          "score": 10.0,
+          "final_score": 10.0,
+          "weight": 10.0,
+          "max_score": 10.0,
+          "justification": "The response gives several concrete details for this requirement. Confirm the cited terms in the final contract.",
+          "evidence": {
+            "quote": "The product offers REST and GraphQL APIs, webhooks, and a monthly release cadence.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "high",
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": "Data Residency & Privacy",
+          "criterion_name": "Data Residency & Privacy",
+          "score": 4.0,
+          "final_score": 4.0,
+          "weight": 8.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "Hosting region and subprocessor locations are not listed.",
+            "page": 2,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -6.0,
+          "relative_pct": 40.0
+        },
+        {
+          "criterion_id": "Exit & Portability",
+          "criterion_name": "Exit & Portability",
+          "score": 4.0,
+          "final_score": 4.0,
+          "weight": 7.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "Exporting linked records, configuration, and audit history is not described;\ntransition assistance is not included in the fixed price.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -6.0,
+          "relative_pct": 40.0
+        },
+        {
+          "criterion_id": "Security Certification",
+          "criterion_name": "Security Certification",
+          "score": 2.5,
+          "final_score": 2.5,
+          "weight": 5.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides limited evidence for this requirement; clarify the gap before relying on the score.",
+          "evidence": {
+            "quote": "The company has no current SOC 2 Type II report or ISO 27001 certificate; the SOC 2 audit is planned for the fourth\nquarter.",
+            "page": 3,
+            "verified": true
+          },
+          "confidence": "medium",
+          "benchmark": 10.0,
+          "gap": -7.5,
+          "relative_pct": 25.0
+        }
+      ],
+      "risks": [
+        "Security Certification: required current assurance evidence is missing or planned"
+      ],
+      "overall_summary": "Offline keyword-based demo evaluation. Confirm every score and mandatory gate against the proposal before relying on the result.",
+      "gates": [
+        {
+          "gate_id": "security_certificate",
+          "name": "Valid security assurance",
+          "outcome": "no",
+          "evidence": "Security Certification\nThe company has no current SOC 2 Type II report or ISO 27001 certificate; the SOC 2 audit is planned for the fourth\nquarter.",
+          "page": 3,
+          "mandatory": true
+        }
+      ],
+      "compliant": false,
+      "status": "AI Evaluated",
+      "warnings": [],
+      "absolute_score": 49.85,
+      "benchmark_metrics": {
+        "Technical Capability": {
+          "benchmark": 7.0,
+          "gap": -5.0,
+          "relative_pct": 28.57142857142857
+        },
+        "Implementation Plan": {
+          "benchmark": 10.0,
+          "gap": -7.0,
+          "relative_pct": 30.0
+        },
+        "Commercial Value": {
+          "benchmark": 9.2,
+          "gap": -2.1999999999999993,
+          "relative_pct": 76.08695652173914
+        },
+        "Security & Compliance": {
+          "benchmark": 10.0,
+          "gap": -5.0,
+          "relative_pct": 50.0
+        },
+        "Support & Experience": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Service Levels & Availability": {
+          "benchmark": 10.0,
+          "gap": -5.0,
+          "relative_pct": 50.0
+        },
+        "API & Integration Depth": {
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        "Data Residency & Privacy": {
+          "benchmark": 10.0,
+          "gap": -6.0,
+          "relative_pct": 40.0
+        },
+        "Exit & Portability": {
+          "benchmark": 10.0,
+          "gap": -6.0,
+          "relative_pct": 40.0
+        },
+        "Security Certification": {
+          "benchmark": 10.0,
+          "gap": -7.5,
+          "relative_pct": 25.0
+        }
+      },
+      "ppi": 52.123291925465836,
+      "rank": 4,
+      "tie_break_explanation": "",
+      "supplier_id": "5c2c956b-a1a6-4d36-b945-0d3f5ca950bf"
+    }
+  ],
+  "warnings": [],
+  "estimated_cost_usd": 0.0189945,
+  "reproducibility": {
+    "provider": "MockLLM",
+    "provider_id": "mock",
+    "base_url_host": null,
+    "key_fingerprint": null,
+    "model": "mock-deterministic",
+    "prompt_version": "rfp-evaluation-v1",
+    "criteria_hash": "f653ab816948415f72012a56e9f8432737b0c34ca315a5b479159246744725e4",
+    "documents": {
+      "BrightPath Tech": "87ff0d8805216b7cea5b43c7cd2e153710560c4ec4caa3c309b197b12708d9f4",
+      "Apex Systems": "677b360495c7222f3efa2fbc22e42fb3b668e00bb4f85fb43913656d83079f11",
+      "Orbit Digital": "e76d8f204dc542defa2531c9ba0de4541f451c7823756fe1c7ad2f57fc8a42f0",
+      "NexaWorks": "9dd10d5c43b2653245811457d9714825be4b30588f9809866b293744d05708f5"
+    },
+    "budget_estimate_usd": 0.0189945
+  },
+  "sample_notice": "Synthetic suppliers and deterministic MockLLM output; no live provider or secret used."
+}

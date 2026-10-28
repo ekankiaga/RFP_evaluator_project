@@ -1,0 +1,101 @@
+domain_id: construction_infrastructure
+name: Construction & Infrastructure
+description: Capital projects, construction delivery, and infrastructure services.
+version: 1.0.0
+weight_split:
+  generic: 60
+  domain: 40
+generic_criteria:
+- name: Technical Capability
+  description: Technical solution and fit.
+  weight: 30
+  max_score: 10
+  what_to_inspect: Solution design, capacity, interoperability, performance evidence, and fit to the stated
+    requirements.
+- name: Implementation Plan
+  description: Schedule, staffing, and delivery.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Named owners, milestones, delivery timeline, staffing, dependencies, testing, training,
+    and risk controls.
+- name: Commercial Value
+  description: Cost and commercial clarity.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Total cost of ownership, price structure, included services, exclusions, assumptions,
+    and additional fees.
+- name: Security & Compliance
+  description: Safety, regulatory, and quality controls.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Security controls, independent audit evidence, privacy practices, incident response,
+    and stated limitations.
+- name: Support & Experience
+  description: Relevant project track record.
+  weight: 10
+  max_score: 10
+  what_to_inspect: Support hours, response and resolution targets, escalation, comparable delivery experience,
+    and references.
+domain_criteria:
+- name: Safety Record & Controls
+  description: Safety performance and site safety management.
+  weight: 10
+  max_score: 10
+  what_to_inspect: TRIR, safety plans, training, corrective actions.
+  red_flags:
+  - No safety metrics
+  evidence_hints:
+  - TRIR
+  - safety plan
+  is_mandatory_gate: false
+- name: Bonding & Insurance
+  description: Capacity and coverage for project obligations.
+  weight: 9
+  max_score: 10
+  what_to_inspect: Bonding limits, surety, insurance certificates.
+  red_flags:
+  - Coverage below requirement
+  evidence_hints:
+  - bond
+  - surety
+  - insurance
+  is_mandatory_gate: true
+- name: Subcontractor Management
+  description: Oversight of subcontractors and supply dependencies.
+  weight: 8
+  max_score: 10
+  what_to_inspect: Selection, oversight, flow-down requirements.
+  red_flags:
+  - Unidentified critical subcontractors
+  evidence_hints:
+  - subcontractor
+  - oversight
+  is_mandatory_gate: false
+- name: Schedule & Delay Risk
+  description: Realism of critical path and mitigation plan.
+  weight: 7
+  max_score: 10
+  what_to_inspect: Critical path, float, contingencies, recovery plan.
+  red_flags:
+  - Unsupported completion date
+  evidence_hints:
+  - critical path
+  - float
+  is_mandatory_gate: false
+- name: Materials Compliance
+  description: Standards, provenance, and testing of materials.
+  weight: 6
+  max_score: 10
+  what_to_inspect: Specifications, testing, traceability, environmental standards.
+  red_flags:
+  - Unverified substitutions
+  evidence_hints:
+  - material test
+  - traceability
+  is_mandatory_gate: false
+gates:
+- gate_id: bonding
+  name: Required bonding capacity
+  rule: Pass when stated bonding capacity meets the procurement threshold.
+domain_prompt_addendum: Evaluate schedule and cost assumptions separately. Treat safety statistics, insurance,
+  and bonding as evidence-based claims.

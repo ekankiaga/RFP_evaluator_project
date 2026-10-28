@@ -1,0 +1,54 @@
+{
+  "criteria": [
+    {
+      "name": "Technical Capability",
+      "description": "Architecture, integrations, scalability, and technical fit.",
+      "weight": 30.0,
+      "max_score": 10,
+      "what_to_inspect": "Solution design, capacity, interoperability, performance evidence, and fit to the stated requirements.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Implementation Plan",
+      "description": "Timeline, milestones, staffing, and delivery risk.",
+      "weight": 20.0,
+      "max_score": 10,
+      "what_to_inspect": "Named owners, milestones, delivery timeline, staffing, dependencies, testing, training, and risk controls.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Commercial Value",
+      "description": "Pricing clarity, total cost, and assumptions.",
+      "weight": 20.0,
+      "max_score": 10,
+      "what_to_inspect": "Total cost of ownership, price structure, included services, exclusions, assumptions, and additional fees.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Security & Compliance",
+      "description": "Controls, certifications, privacy, and auditability.",
+      "weight": 20.0,
+      "max_score": 10,
+      "what_to_inspect": "Security controls, independent audit evidence, privacy practices, incident response, and stated limitations.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Support & Experience",
+      "description": "Support model and relevant experience.",
+      "weight": 10.0,
+      "max_score": 10,
+      "what_to_inspect": "Support hours, response and resolution targets, escalation, comparable delivery experience, and references.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+domain_id: healthcare_life_sciences
+name: Healthcare & Life Sciences
+description: Healthcare technology, clinical operations, and regulated life sciences procurement.
+version: 1.0.0
+weight_split:
+  generic: 60
+  domain: 40
+generic_criteria:
+- name: Technical Capability
+  description: Assesses fit to the required clinical, data, and workflow needs.
+  weight: 30
+  max_score: 10
+  what_to_inspect: Supported workflows, system capacity, interoperability, interfaces, test evidence,
+    implementation dependencies, and limitations.
+  evidence_hints:
+  - FHIR
+  - HL7
+  - interface
+  - workflow
+  - capacity
+  - test
+- name: Implementation Plan
+  description: Assesses whether delivery and validation are planned, owned, and testable.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Named clinical and technical owners, timeline, data reconciliation, validation scripts,
+    user testing, go-live, and hypercare.
+  evidence_hints:
+  - owner
+  - timeline
+  - validation
+  - reconciliation
+  - testing
+  - go-live
+  - hypercare
+- name: Commercial Value
+  description: Assesses price transparency and total cost over the stated contract term.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Contract term total, included BAA/interfaces/validation/support, exclusions, optional
+    fees, and assumptions. Do not reward low price alone.
+  evidence_hints:
+  - five-year total
+  - included
+  - excluded
+  - fee
+  - priced separately
+  - assumption
+- name: Security & Compliance
+  description: Assesses documented privacy safeguards without inferring regulatory compliance.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Encryption, role-based access, incident notice, audit evidence, report scope/date,
+    and explicit gaps. A general security claim is not proof of HIPAA or GxP compliance.
+  evidence_hints:
+  - encryption
+  - role-based
+  - SOC 2
+  - ISO 27001
+  - incident
+  - audit
+- name: Support & Experience
+  description: Assesses clinical support coverage and relevant delivery experience.
+  weight: 10
+  max_score: 10
+  what_to_inspect: 24/7 coverage, priority response target, downtime process, recovery objectives, comparable
+    deployments, and support limitations.
+  evidence_hints:
+  - support
+  - response target
+  - downtime
+  - recovery
+  - deployments
+  - references
+domain_criteria:
+- name: HIPAA & GxP Controls
+  description: Evidence of applicable safeguards and validated processes.
+  weight: 10
+  max_score: 10
+  what_to_inspect: HIPAA safeguards, BAA, GxP validation and quality processes.
+  red_flags:
+  - No BAA
+  - unsupported compliance claim
+  evidence_hints:
+  - BAA
+  - HIPAA
+  - GxP
+  - validation
+  is_mandatory_gate: true
+- name: Clinical Validation
+  description: Evidence supporting clinical safety and performance.
+  weight: 9
+  max_score: 10
+  what_to_inspect: Validation design, outcomes, population, limitations.
+  red_flags:
+  - Unsubstantiated clinical claims
+  evidence_hints:
+  - clinical study
+  - validation
+  is_mandatory_gate: false
+- name: HL7/FHIR Interoperability
+  description: Exchange of health data using relevant standards.
+  weight: 8
+  max_score: 10
+  what_to_inspect: HL7/FHIR versions, interfaces, conformance testing.
+  red_flags:
+  - Interoperability asserted without detail
+  evidence_hints:
+  - HL7
+  - FHIR
+  - interface
+  is_mandatory_gate: false
+- name: Patient Data Governance
+  description: Patient data access, retention, consent, and deletion.
+  weight: 7
+  max_score: 10
+  what_to_inspect: Access controls, incident response.
+  red_flags:
+  - Unclear patient data use
+  evidence_hints:
+  - patient data
+  - consent
+  - retention
+  is_mandatory_gate: false
+- name: Safety & Quality Management
+  description: Quality system and safety escalation processes.
+  weight: 6
+  max_score: 10
+  what_to_inspect: QMS, CAPA, safety reporting, audit trails.
+  red_flags:
+  - No safety process
+  evidence_hints:
+  - QMS
+  - CAPA
+  - safety
+  is_mandatory_gate: false
+gates:
+- gate_id: baa
+  name: BAA offered
+  rule: Pass only when the proposal explicitly offers a Business Associate Agreement where required.
+domain_prompt_addendum: Score clinical validation, interoperability, privacy, implementation, support,
+  and commercial terms separately. A BAA is met only when the proposal explicitly offers or includes one.
+  Do not infer HIPAA or GxP compliance from encryption or general security claims. For FHIR and HL7, look
+  for named versions/resources or interfaces and test evidence. Treat unvalidated clinical claims and
+  missing validation ownership as gaps; do not make legal or clinical safety conclusions.

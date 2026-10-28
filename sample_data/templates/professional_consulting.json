@@ -1,0 +1,131 @@
+{
+  "criteria": [
+    {
+      "name": "Technical Capability",
+      "description": "Expertise relevant to the requested work.",
+      "weight": 18.0,
+      "max_score": 10,
+      "what_to_inspect": "Solution design, capacity, interoperability, performance evidence, and fit to the stated requirements.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Implementation Plan",
+      "description": "Workplan, milestones, and governance.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Named owners, milestones, delivery timeline, staffing, dependencies, testing, training, and risk controls.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Commercial Value",
+      "description": "Fees and commercial clarity.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Total cost of ownership, price structure, included services, exclusions, assumptions, and additional fees.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Security & Compliance",
+      "description": "Confidentiality and data controls.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Security controls, independent audit evidence, privacy practices, incident response, and stated limitations.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Support & Experience",
+      "description": "Service, references, and expertise.",
+      "weight": 6.0,
+      "max_score": 10,
+      "what_to_inspect": "Support hours, response and resolution targets, escalation, comparable delivery experience, and references.",
+      "red_flags": [],
+      "evidence_hints": [],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Team Seniority & Continuity",
+      "description": "Experience and stability of the proposed team.",
+      "weight": 10.0,
+      "max_score": 10,
+      "what_to_inspect": "Named roles, seniority, allocation, replacement controls.",
+      "red_flags": [
+        "Senior team only in sales process"
+      ],
+      "evidence_hints": [
+        "team",
+        "allocation",
+        "senior"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Methodology & Quality",
+      "description": "Suitability and quality controls of the proposed method.",
+      "weight": 9.0,
+      "max_score": 10,
+      "what_to_inspect": "Research, delivery methods, QA, and adaptation.",
+      "red_flags": [
+        "Generic methodology"
+      ],
+      "evidence_hints": [
+        "methodology",
+        "quality review"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Knowledge Transfer",
+      "description": "Transfer of outputs and capability to client staff.",
+      "weight": 8.0,
+      "max_score": 10,
+      "what_to_inspect": "Training, artifacts, documentation, handover.",
+      "red_flags": [
+        "Client dependency after completion"
+      ],
+      "evidence_hints": [
+        "knowledge transfer",
+        "handover"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Outcome-based Pricing",
+      "description": "Alignment of compensation with outputs and outcomes.",
+      "weight": 7.0,
+      "max_score": 10,
+      "what_to_inspect": "Deliverable fees, milestones, incentives, caps.",
+      "red_flags": [
+        "Unbounded time-and-materials"
+      ],
+      "evidence_hints": [
+        "fixed fee",
+        "milestone",
+        "outcome"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Relevant References",
+      "description": "Evidence of success on comparable engagements.",
+      "weight": 6.0,
+      "max_score": 10,
+      "what_to_inspect": "Comparable scope, outcomes, recency, reference availability.",
+      "red_flags": [
+        "Unverifiable references"
+      ],
+      "evidence_hints": [
+        "reference",
+        "outcome"
+      ],
+      "is_mandatory_gate": false
+    }
+  ]
+}

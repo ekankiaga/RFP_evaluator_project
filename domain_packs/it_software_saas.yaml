@@ -1,0 +1,148 @@
+domain_id: it_software_saas
+name: IT / Software & SaaS
+description: Procurement of software, SaaS platforms, cloud services, and integrations.
+version: 1.0.0
+weight_split:
+  generic: 60
+  domain: 40
+generic_criteria:
+- name: Technical Capability
+  description: Assesses fit to the requested workload, users, systems, and operating requirements.
+  weight: 30
+  max_score: 10
+  what_to_inspect: Named capacity, architecture, supported integrations, tested connectors, performance
+    limits, and requirements not met.
+  evidence_hints:
+  - capacity
+  - architecture
+  - API
+  - connector
+  - integration test
+  - performance
+- name: Implementation Plan
+  description: Assesses whether the supplier has a resourced and testable delivery plan.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Named delivery owners, timeline, milestones, migration rehearsals, acceptance criteria,
+    training, dependencies, and rollback.
+  evidence_hints:
+  - owner
+  - timeline
+  - milestone
+  - migration
+  - rehearsal
+  - acceptance
+  - training
+  - rollback
+- name: Commercial Value
+  description: Assesses price transparency and total cost over the stated contract term.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Contract term total, included services, exclusions, variable charges, assumptions,
+    price changes, and optional costs. Do not reward low price alone.
+  evidence_hints:
+  - five-year total
+  - included
+  - excluded
+  - fee
+  - priced separately
+  - assumption
+- name: Security & Compliance
+  description: Assesses evidenced safeguards and transparent disclosure of security limitations.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Encryption, access control, incident notice, independent audit evidence, report scope
+    and date, and identified control gaps.
+  evidence_hints:
+  - encryption
+  - access control
+  - SOC 2
+  - ISO 27001
+  - incident
+  - audit
+- name: Support & Experience
+  description: Assesses support availability and relevant delivery experience.
+  weight: 10
+  max_score: 10
+  what_to_inspect: Support hours, priority response target, escalation, recovery objectives, comparable
+    deployments, and support limitations.
+  evidence_hints:
+  - support
+  - response target
+  - escalation
+  - recovery
+  - deployments
+  - references
+domain_criteria:
+- name: Service Levels & Availability
+  description: Strength and enforceability of service levels.
+  weight: 10
+  max_score: 10
+  what_to_inspect: Uptime target, measurement window, service credits, escalation.
+  red_flags:
+  - Ambiguous uptime
+  - no remedies
+  evidence_hints:
+  - SLA
+  - uptime
+  - service credit
+  is_mandatory_gate: false
+- name: API & Integration Depth
+  description: Fit with required systems and integration patterns.
+  weight: 10
+  max_score: 10
+  what_to_inspect: API coverage, standards, connectors, migration.
+  red_flags:
+  - Vague integration plan
+  evidence_hints:
+  - API
+  - connector
+  - integration
+  is_mandatory_gate: false
+- name: Data Residency & Privacy
+  description: Location, handling, retention, and access controls for data.
+  weight: 8
+  max_score: 10
+  what_to_inspect: Hosting regions, subprocessors, deletion.
+  red_flags:
+  - Unspecified data location
+  evidence_hints:
+  - region
+  - residency
+  - retention
+  is_mandatory_gate: false
+- name: Exit & Portability
+  description: Ability to export data and transition at contract end.
+  weight: 7
+  max_score: 10
+  what_to_inspect: Formats, fees, transition assistance, deletion proof.
+  red_flags:
+  - No export path
+  evidence_hints:
+  - export
+  - portability
+  - exit
+  is_mandatory_gate: false
+- name: Security Certification
+  description: Current independent security assurance.
+  weight: 5
+  max_score: 10
+  what_to_inspect: ISO 27001 or SOC 2 scope and validity.
+  red_flags:
+  - Certificate absent or expired
+  evidence_hints:
+  - ISO 27001
+  - SOC 2
+  is_mandatory_gate: true
+gates:
+- gate_id: security_certificate
+  name: Valid security assurance
+  rule: Pass only when the proposal explicitly provides a current ISO 27001 certificate or SOC 2 Type
+    II report.
+domain_prompt_addendum: Score technical fit, implementation, security, support, service levels, integrations,
+  data residency, exit, and certification as separate requirements. A SOC 2 Type II report or ISO 27001
+  certificate passes the security gate only when the proposal explicitly identifies current evidence;
+  planned or in-progress audits do not pass. Hosting region must be stated, not inferred from supplier
+  location. For SLA, distinguish the uptime target, measurement period, remedies, and recovery objectives.
+  For commercial value, compare inclusions and exclusions as well as total price; do not infer a buyer
+  budget.

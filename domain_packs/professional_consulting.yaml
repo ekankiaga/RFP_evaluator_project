@@ -1,0 +1,102 @@
+domain_id: professional_consulting
+name: Professional / Consulting Services
+description: Advisory and professional services engagements.
+version: 1.0.0
+weight_split:
+  generic: 60
+  domain: 40
+generic_criteria:
+- name: Technical Capability
+  description: Expertise relevant to the requested work.
+  weight: 30
+  max_score: 10
+  what_to_inspect: Solution design, capacity, interoperability, performance evidence, and fit to the stated
+    requirements.
+- name: Implementation Plan
+  description: Workplan, milestones, and governance.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Named owners, milestones, delivery timeline, staffing, dependencies, testing, training,
+    and risk controls.
+- name: Commercial Value
+  description: Fees and commercial clarity.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Total cost of ownership, price structure, included services, exclusions, assumptions,
+    and additional fees.
+- name: Security & Compliance
+  description: Confidentiality and data controls.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Security controls, independent audit evidence, privacy practices, incident response,
+    and stated limitations.
+- name: Support & Experience
+  description: Service, references, and expertise.
+  weight: 10
+  max_score: 10
+  what_to_inspect: Support hours, response and resolution targets, escalation, comparable delivery experience,
+    and references.
+domain_criteria:
+- name: Team Seniority & Continuity
+  description: Experience and stability of the proposed team.
+  weight: 10
+  max_score: 10
+  what_to_inspect: Named roles, seniority, allocation, replacement controls.
+  red_flags:
+  - Senior team only in sales process
+  evidence_hints:
+  - team
+  - allocation
+  - senior
+  is_mandatory_gate: false
+- name: Methodology & Quality
+  description: Suitability and quality controls of the proposed method.
+  weight: 9
+  max_score: 10
+  what_to_inspect: Research, delivery methods, QA, and adaptation.
+  red_flags:
+  - Generic methodology
+  evidence_hints:
+  - methodology
+  - quality review
+  is_mandatory_gate: false
+- name: Knowledge Transfer
+  description: Transfer of outputs and capability to client staff.
+  weight: 8
+  max_score: 10
+  what_to_inspect: Training, artifacts, documentation, handover.
+  red_flags:
+  - Client dependency after completion
+  evidence_hints:
+  - knowledge transfer
+  - handover
+  is_mandatory_gate: false
+- name: Outcome-based Pricing
+  description: Alignment of compensation with outputs and outcomes.
+  weight: 7
+  max_score: 10
+  what_to_inspect: Deliverable fees, milestones, incentives, caps.
+  red_flags:
+  - Unbounded time-and-materials
+  evidence_hints:
+  - fixed fee
+  - milestone
+  - outcome
+  is_mandatory_gate: false
+- name: Relevant References
+  description: Evidence of success on comparable engagements.
+  weight: 6
+  max_score: 10
+  what_to_inspect: Comparable scope, outcomes, recency, reference availability.
+  red_flags:
+  - Unverifiable references
+  evidence_hints:
+  - reference
+  - outcome
+  is_mandatory_gate: false
+gates:
+- gate_id: confidentiality
+  name: Confidentiality commitment
+  rule: Pass when the proposal explicitly accepts the required confidentiality terms.
+domain_prompt_addendum: Score the proposed delivery team and named method. Distinguish measurable outcomes
+  from general capability statements.

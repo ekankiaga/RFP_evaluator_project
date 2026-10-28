@@ -1,0 +1,171 @@
+{
+  "criteria": [
+    {
+      "name": "Technical Capability",
+      "description": "Assesses fit to the requested workload, users, systems, and operating requirements.",
+      "weight": 18.0,
+      "max_score": 10,
+      "what_to_inspect": "Named capacity, architecture, supported integrations, tested connectors, performance limits, and requirements not met.",
+      "red_flags": [],
+      "evidence_hints": [
+        "capacity",
+        "architecture",
+        "API",
+        "connector",
+        "integration test",
+        "performance"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Implementation Plan",
+      "description": "Assesses whether the supplier has a resourced and testable delivery plan.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Named delivery owners, timeline, milestones, migration rehearsals, acceptance criteria, training, dependencies, and rollback.",
+      "red_flags": [],
+      "evidence_hints": [
+        "owner",
+        "timeline",
+        "milestone",
+        "migration",
+        "rehearsal",
+        "acceptance",
+        "training",
+        "rollback"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Commercial Value",
+      "description": "Assesses price transparency and total cost over the stated contract term.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Contract term total, included services, exclusions, variable charges, assumptions, price changes, and optional costs. Do not reward low price alone.",
+      "red_flags": [],
+      "evidence_hints": [
+        "five-year total",
+        "included",
+        "excluded",
+        "fee",
+        "priced separately",
+        "assumption"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Security & Compliance",
+      "description": "Assesses evidenced safeguards and transparent disclosure of security limitations.",
+      "weight": 12.0,
+      "max_score": 10,
+      "what_to_inspect": "Encryption, access control, incident notice, independent audit evidence, report scope and date, and identified control gaps.",
+      "red_flags": [],
+      "evidence_hints": [
+        "encryption",
+        "access control",
+        "SOC 2",
+        "ISO 27001",
+        "incident",
+        "audit"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Support & Experience",
+      "description": "Assesses support availability and relevant delivery experience.",
+      "weight": 6.0,
+      "max_score": 10,
+      "what_to_inspect": "Support hours, priority response target, escalation, recovery objectives, comparable deployments, and support limitations.",
+      "red_flags": [],
+      "evidence_hints": [
+        "support",
+        "response target",
+        "escalation",
+        "recovery",
+        "deployments",
+        "references"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Service Levels & Availability",
+      "description": "Strength and enforceability of service levels.",
+      "weight": 10.0,
+      "max_score": 10,
+      "what_to_inspect": "Uptime target, measurement window, service credits, escalation.",
+      "red_flags": [
+        "Ambiguous uptime",
+        "no remedies"
+      ],
+      "evidence_hints": [
+        "SLA",
+        "uptime",
+        "service credit"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "API & Integration Depth",
+      "description": "Fit with required systems and integration patterns.",
+      "weight": 10.0,
+      "max_score": 10,
+      "what_to_inspect": "API coverage, standards, connectors, migration.",
+      "red_flags": [
+        "Vague integration plan"
+      ],
+      "evidence_hints": [
+        "API",
+        "connector",
+        "integration"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Data Residency & Privacy",
+      "description": "Location, handling, retention, and access controls for data.",
+      "weight": 8.0,
+      "max_score": 10,
+      "what_to_inspect": "Hosting regions, subprocessors, deletion.",
+      "red_flags": [
+        "Unspecified data location"
+      ],
+      "evidence_hints": [
+        "region",
+        "residency",
+        "retention"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Exit & Portability",
+      "description": "Ability to export data and transition at contract end.",
+      "weight": 7.0,
+      "max_score": 10,
+      "what_to_inspect": "Formats, fees, transition assistance, deletion proof.",
+      "red_flags": [
+        "No export path"
+      ],
+      "evidence_hints": [
+        "export",
+        "portability",
+        "exit"
+      ],
+      "is_mandatory_gate": false
+    },
+    {
+      "name": "Security Certification",
+      "description": "Current independent security assurance.",
+      "weight": 5.0,
+      "max_score": 10,
+      "what_to_inspect": "ISO 27001 or SOC 2 scope and validity.",
+      "red_flags": [
+        "Certificate absent or expired"
+      ],
+      "evidence_hints": [
+        "ISO 27001",
+        "SOC 2"
+      ],
+      "is_mandatory_gate": true
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+domain_id: financial_services
+name: Financial Services
+description: Regulated financial services technology, operations, and advisory procurement.
+version: 1.0.0
+weight_split:
+  generic: 60
+  domain: 40
+generic_criteria:
+- name: Technical Capability
+  description: Technical and functional fit.
+  weight: 30
+  max_score: 10
+  what_to_inspect: Solution design, capacity, interoperability, performance evidence, and fit to the stated
+    requirements.
+- name: Implementation Plan
+  description: Delivery plan and governance.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Named owners, milestones, delivery timeline, staffing, dependencies, testing, training,
+    and risk controls.
+- name: Commercial Value
+  description: Cost and commercial terms.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Total cost of ownership, price structure, included services, exclusions, assumptions,
+    and additional fees.
+- name: Security & Compliance
+  description: Regulatory controls and assurance.
+  weight: 20
+  max_score: 10
+  what_to_inspect: Security controls, independent audit evidence, privacy practices, incident response,
+    and stated limitations.
+- name: Support & Experience
+  description: Experience and service model.
+  weight: 10
+  max_score: 10
+  what_to_inspect: Support hours, response and resolution targets, escalation, comparable delivery experience,
+    and references.
+domain_criteria:
+- name: Regulatory Compliance
+  description: Evidence addressing applicable financial regulations.
+  weight: 10
+  max_score: 10
+  what_to_inspect: Regulatory scope, control mapping, examination support.
+  red_flags:
+  - Generic compliance assertion
+  evidence_hints:
+  - regulation
+  - control mapping
+  is_mandatory_gate: true
+- name: Auditability & Evidence
+  description: Completeness and accessibility of audit trails.
+  weight: 9
+  max_score: 10
+  what_to_inspect: Immutable logs, retention, export, auditor access.
+  red_flags:
+  - No audit export
+  evidence_hints:
+  - audit trail
+  - retention
+  is_mandatory_gate: false
+- name: Model Risk Management
+  description: Governance for models and automated decisions.
+  weight: 8
+  max_score: 10
+  what_to_inspect: Validation, explainability, monitoring, human review.
+  red_flags:
+  - No model validation
+  evidence_hints:
+  - model risk
+  - validation
+  is_mandatory_gate: false
+- name: Operational Resilience
+  description: Continuity and recovery capability.
+  weight: 7
+  max_score: 10
+  what_to_inspect: RTO/RPO, recovery tests, incident communications.
+  red_flags:
+  - No tested recovery targets
+  evidence_hints:
+  - RTO
+  - RPO
+  - recovery
+  is_mandatory_gate: false
+- name: Third-party Risk
+  description: Subprocessor oversight and concentration risk.
+  weight: 6
+  max_score: 10
+  what_to_inspect: Subcontractors, due diligence, notification, exit rights.
+  red_flags:
+  - Undisclosed subprocessors
+  evidence_hints:
+  - third party
+  - subprocessor
+  is_mandatory_gate: false
+gates:
+- gate_id: regulatory_controls
+  name: Required regulatory controls
+  rule: Pass only when the proposal explicitly addresses the required control framework.
+domain_prompt_addendum: Avoid treating certifications as proof of every regulatory obligation. Score the
+  stated scope and evidence, and flag omissions.

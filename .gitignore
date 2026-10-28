@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+.streamlit/secrets.toml
+phase2tmp/
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+
+# Local test/run artifacts
+pytest_tmp*/
+outputs/
